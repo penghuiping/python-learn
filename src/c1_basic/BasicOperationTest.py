@@ -9,6 +9,7 @@ print("16进制表示:", 0xF)
 print(bin(15))
 print(hex(15))
 
+
 # 基本运算
 print("加法:", 1 + 1)
 print("减肥:", 2 - 1)
@@ -61,3 +62,5 @@ while True:
         i = i + 1
         print(i, end=' ')
 
+
+import  os
