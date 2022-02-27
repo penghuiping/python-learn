@@ -1,8 +1,17 @@
 # encoding=utf8
-import urllib.request as req
+import requests
 
-# 这个with..as 类似于 java7 中 try..with..resources
-request = req.Request(url="https://www.baidu.com", method="POST")
-with req.urlopen(request) as res:
-    html = res.read()
-    print(html)
+data = {
+    "appId": "jintianli_123",
+    "appSecret": "123456"
+}
+
+try:
+    res = requests.post(url="http://localhost:8080/rcs/basic/login",
+                        json=data, headers={"Content-Type": "application/json;charset=UTF-8"})
+    print(res.text)
+finally:
+    res.close()
+
+
+
